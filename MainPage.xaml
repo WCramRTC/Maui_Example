@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Maui_Example.MainPage"
+             BackgroundColor="#17AECF"
+             >
+
+    <ScrollView>
+        <HorizontalStackLayout
+            HorizontalOptions="Center"
+            Padding="20,0,0,0"
+            >
+            <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Start"
+            HorizontalOptions="Center"
+            >
+
+                <Label Text="Name of your sandwich" VerticalTextAlignment="Center"/>
+                <Entry x:Name="txtSWName" BackgroundColor="White"
+                   TextColor="Black"
+                   />
+
+                <HorizontalStackLayout>
+                    <VerticalStackLayout x:Name="rbgBread" RadioButtonGroup.GroupName="Bread">
+                        <RadioButton x:Name="rbWhite" Content="White" IsEnabled="True"/>
+                        <RadioButton x:Name="rbWheat" Content="Wheat" />
+                        <RadioButton x:Name="rbRosemary" Content="Rosemary" />
+                        <RadioButton x:Name="rbGluttenFree" Content="Glutten Free" />
+                    </VerticalStackLayout>
+                    <VerticalStackLayout RadioButtonGroup.GroupName="Food">
+                        <HorizontalStackLayout>
+                            <CheckBox x:Name="ckMeat"  />
+                            <Label Text="Meat" VerticalTextAlignment="Center"/>
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout>
+                            <CheckBox  x:Name="ckCheese"  />
+                            <Label Text="Cheese" VerticalTextAlignment="Center" />
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout>
+                            <CheckBox x:Name="ckLettuce"   />
+                            <Label Text="Lettuce" VerticalTextAlignment="Center" />
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout>
+                            <CheckBox x:Name="ckTomato"  />
+                            <Label Text="Tomato"  VerticalTextAlignment="Center"/>
+                        </HorizontalStackLayout>
+
+                    </VerticalStackLayout>
+
+                </HorizontalStackLayout>
+
+                <Button
+                x:Name="btnOrder"
+                Text="Order Your Sandwich"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Center" 
+                SemanticProperties.Hint="Order Sandwich"
+                    />
+
+            </VerticalStackLayout>
+            <VerticalStackLayout Padding="40">
+                <Editor 
+                    x:Name="rtbOrder"
+                    HeightRequest="300"
+                        WidthRequest="300"
+                        BackgroundColor="White"
+                        TextColor="Black"
+                        />
+            </VerticalStackLayout>
+        </HorizontalStackLayout>
+      
+    </ScrollView>
+
+</ContentPage>
