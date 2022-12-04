@@ -47,7 +47,7 @@ public partial class MainPage : ContentPage
 	private string SelectedBread()
 	{
 		string breadOrder = "Bread:\n";
-		if(rbWheat.IsChecked)
+		if(rbWhite.IsChecked)
 		{
 			breadOrder += "White\n";
 		}

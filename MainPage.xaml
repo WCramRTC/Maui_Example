@@ -24,7 +24,7 @@
 
                 <HorizontalStackLayout>
                     <VerticalStackLayout x:Name="rbgBread" RadioButtonGroup.GroupName="Bread">
-                        <RadioButton x:Name="rbWhite" Content="White" IsEnabled="True"/>
+                        <RadioButton x:Name="rbWhite" Content="White" IsChecked="True"/>
                         <RadioButton x:Name="rbWheat" Content="Wheat" />
                         <RadioButton x:Name="rbRosemary" Content="Rosemary" />
                         <RadioButton x:Name="rbGluttenFree" Content="Glutten Free" />
